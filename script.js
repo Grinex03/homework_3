@@ -29,25 +29,25 @@ for (i = rev.length-1; i>=0 ; i--) {
 	console.log(i,rev[i]);	
 };
 // ************************************************3***************************************************************
-let a = [], b = [], c= [];
+let a = [], b = [];
+let res = '';
+
 a.length = 10;
 b.length = 10;
 for(i = 0; i < a.length ||b < b.length;  i++){
 	a[i] = Math.floor(Math.random()* 10)+10;
 	b[i] = Math.floor(Math.random()* 10)+10;
-};
-a.sort();
-b.sort();
-console.log(a, b);
-let k = a.length, j = b.length;
-while (k > 0 && j > 0 ){
-	k--;
-	j--;
-	if(a[k]>= b[j]) j++;
-		else if (a[k]<= b[j]) k++ ;
-		else c.push(a[k]);
-};
-console.log(a);
+}; 
+for (let i in a) {
+	for (let j in b) {
+
+		if (a[i] == b[j]) {
+			res +=a[i] + '; ';
+		}
+	}
+}
+console.log(res);
+
 
 // ***********************************************4*******************************************************************
 var mass = [ 1, 2, 3, 4, 5, 6];
